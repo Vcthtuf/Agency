@@ -38,18 +38,170 @@
 
 // =================
 
-.container {
+// ====  General styles  ====
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    //max-width: 1920px;
     margin: 0 auto;
 }
 
-.col-4 {
-    color: red;
-    text-align: center;
+// ==== Styles for header ====
+
+header {
+    position: relative;
+    height: 50px;
+    
+    nav {
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        background-color: #212121;
+        z-index: 5;
+
+        ul.menu {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding: 13px 70px;
+
+            li.menu_item {
+                border-right: 2px dotted #000;
+                padding-right: 28px;
+                
+                  
+
+                a.menu_link {
+                    font-size: 15px;
+                    font-family: @Roboto_Light;
+                    color: rgb(255, 255, 255);      
+                }
+
+                a.menu_link:hover {
+                    color: rgb(255, 255, 255);
+                }
+            }
+
+            li.menu_item:last-child {
+                border: none;
+            }
+        }
+    }
+
+    .subheader {
+        background-color:rgba(0,0,0,0.6);
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        
+
+        a.subheader_logo {
+            display: block;
+            margin-top: 16px;
+            margin-bottom: 4px;
+            max-width: 100%;
+        }
+
+        .subheader_official {
+            font-size: 13px;
+            font-family: @Roboto_Thin;
+            color: rgba(255, 255, 255, 0.502);
+            text-align: left;  
+            margin-bottom: 17px;
+            line-height: 1em;
+        }
+
+        .subheader_call {
+            font-size: 12px;
+            font-family: @Roboto_Light;
+            color: rgb(255, 255, 255);
+            text-align: right; 
+            margin-top: 20px;
+                  
+        }
+
+        a.subheader_phone {
+            display: block;
+            font-size: 22px;
+            font-family: @Roboto_Regular;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            text-align: right; 
+            line-height: 22px;   
+        }
+
+        .subheader_btn {
+                width: 182px;
+                height: 56px;
+                margin-top: 13px;
+                padding: 0;
+                background-image: linear-gradient(to bottom, #4ce2ff, #20afca);
+                border: none;
+                border-radius: 4px;
+                font-size: 14px;
+                font-family: @Roboto_Regular;
+                color: rgb(255, 255, 255);
+                text-transform: uppercase;
+                text-align: center;
+                text-shadow: 0.707px 0.707px 0px rgba(0, 0, 0, 0.21);
+                box-shadow: inset 0 -3px rgba(0,0,0,.12);
+        }
+    }
 }
 
+.promo{
+    background: url('../img/bg/header_bg.jpg') center center/cover no-repeat;
+    text-align: center;
+    padding-bottom: 135px;
+    padding-top: 198px;
+    margin-bottom: 3000px;
+    
+    h1.promo_header {
+        font-size: 60px;
+        font-family: "Roboto";
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-bottom: 20px;
+        line-height: 1em;
+    }
 
+    h2.promo_subheader {
+        font-size: 36px;
+        font-family: "Roboto";
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 1em;
+        margin-bottom: 25px;
+    }
 
+    p.promo_descr {
+        font-size: 18px;
+        font-family: @Roboto_Regular;
+        color: rgb(255, 255, 255);
+        line-height: 1.333;   
+        margin-bottom: 102px;   
+    }
 
-
-
-
+    .promo_btn {
+        background-image: linear-gradient(to bottom, #4ce2ff, #20afca);
+        border: none;
+        border-radius: 4px;
+        width: 269px;
+        height: 73px;
+        font-size: 18px;
+        font-family: @Roboto_Regular;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        text-shadow: 0.707px 0.707px 0px rgba(0, 0, 0, 0.21); 
+        box-shadow: inset 0 -3px rgba(0,0,0,.12);    
+    }
+}
