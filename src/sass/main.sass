@@ -1,0 +1,254 @@
+
+// ==== Fonts ====
+
+@font-face
+    font-family: 'Roboto_Regular'
+    src: url(../fonts/Roboto-Regular.eot)
+    src: url(../fonts/Roboto-Regular.ttf)
+    src: url(../fonts/Roboto-Regular.woff)
+
+@font-face
+    font-family: 'Roboto_Light'
+    src: url(../fonts/Roboto-Light.eot)
+    src: url(../fonts/Roboto-Light.ttf)
+    src: url(../fonts/Roboto-Light.woff)
+
+@font-face
+    font-family: 'Roboto_Bold'
+    src: url(../fonts/Roboto-Bold.eot)
+    src: url(../fonts/Roboto-Bold.ttf)
+    src: url(../fonts/Roboto-Bold.woff)
+
+@font-face
+    font-family: 'Roboto_Thin'
+    src: url(../fonts/Roboto-Thin.eot)
+    src: url(../fonts/Roboto-Thin.ttf)
+    src: url(../fonts/Roboto-Thin.woff)
+
+// === Variables ===
+
+$Roboto_Regular: 'Roboto_Refular', Arial, sans-serif
+$Roboto_Light: 'Roboto_Light', Arial, sans-serif
+$Roboto_Bold: 'Roboto_Bold', Arial, sans-serif
+$Roboto_Thin: 'Roboto_Thin', Arial, sans-serif
+
+// =================
+
+// ====  General styles  ====
+
+a
+    text-decoration: none
+
+a:hover, button:hover
+    cursor: pointer
+
+ul
+    list-style-type: none
+
+body
+    margin: 0 auto
+
+// ==== Styles for header ====
+
+header
+    position: relative
+    height: 50px
+    
+    nav
+        position: fixed
+        width: 100%
+        height: 50px
+        background-color: #212121
+        z-index: 5
+
+        ul.menu
+            display: flex
+            justify-content: space-between
+            margin: 0 auto
+            padding: 13px 70px
+
+            li.menu_item
+                border-right: 2px dotted #000
+                padding-right: 28px
+
+                a.menu_link
+                    font-size: 15px
+                    font-family: $Roboto_Light
+                    color: rgb(255, 255, 255)      
+
+                a.menu_link:hover
+                    color: rgb(255, 255, 255)
+                    text-decoration: underline
+
+            li.menu_item:last-child
+                border: none
+
+    .subheader
+        background-color:rgba(0,0,0,0.6)
+        position: absolute
+        top: 50px
+        width: 100%
+        
+
+        a.subheader_logo
+            display: block
+            margin-top: 16px
+            margin-bottom: 4px
+            max-width: 100%
+
+        .subheader_official
+            font-size: 13px
+            font-family: $Roboto_Thin
+            color: rgba(255, 255, 255, 0.502)
+            text-align: left  
+            margin-bottom: 17px
+            line-height: 1em
+
+        .subheader_call
+            font-size: 12px
+            font-family: $Roboto_Light
+            color: rgb(255, 255, 255)
+            text-align: right 
+            margin-top: 20px
+
+        a.subheader_phone
+            display: block
+            font-size: 22px
+            font-family: $Roboto_Regular
+            color: rgb(255, 255, 255)
+            text-transform: uppercase
+            text-align: right
+            line-height: 22px  
+
+        .subheader_btn
+            width: 182px
+            height: 56px
+            margin-top: 13px
+            padding: 0
+            background-image: linear-gradient(to bottom, #4ce2ff, #20afca)
+            border: none
+            border-radius: 4px
+            font-size: 14px
+            font-family: $Roboto_Regular
+            color: rgb(255, 255, 255)
+            text-transform: uppercase
+            text-align: center
+            text-shadow: 0.707px 0.707px 0px rgba(0, 0, 0, 0.21)
+            box-shadow: inset 0 -3px rgba(0,0,0,.12)
+
+section.promo
+    background: url('../img/bg/header_bg.jpg') center center/cover no-repeat
+    text-align: center
+    padding-bottom: 135px
+    padding-top: 198px
+    
+    h1.promo_header 
+        font-size: 60px
+        font-family: "Roboto"
+        color: rgb(255, 255, 255)
+        text-transform: uppercase
+        font-weight: 900
+        margin-bottom: 20px
+        line-height: 1em
+    
+
+    h2.promo_subheader 
+        font-size: 36px
+        font-family: "Roboto"
+        color: rgb(255, 255, 255)
+        text-transform: uppercase
+        font-weight: 700
+        line-height: 1em
+        margin-bottom: 25px
+    
+
+    p.promo_descr 
+        font-size: 18px
+        font-family: $Roboto_Regular
+        color: rgb(255, 255, 255)
+        line-height: 1.333   
+        margin-bottom: 102px   
+    
+
+    .promo_btn 
+        background-image: linear-gradient(to bottom, #4ce2ff, #20afca)
+        border: none
+        border-radius: 4px
+        width: 269px
+        height: 73px
+        font-size: 18px
+        font-family: $Roboto_Regular
+        color: rgb(255, 255, 255)
+        text-transform: uppercase
+        text-shadow: 0.707px 0.707px 0px rgba(0, 0, 0, 0.21) 
+        box-shadow: inset 0 -3px rgba(0,0,0,.12) 
+
+section.reasons
+    padding: 71px 0 65px 0
+    
+    .label
+        margin: 0 auto
+        width: 112px
+        height: 24px
+        line-height: 24px
+        background-color: rgb(0, 0, 0)
+        font-size: 11px
+        font-family: $Roboto_Thin
+        color: rgb(255, 255, 255)
+        text-transform: uppercase
+        text-align: center
+    
+    h2.reasons_title     
+        font-size: 38px
+        font-family: $Roboto_Bold
+        color: rgb(34, 34, 34)
+        font-weight: bold
+        line-height: 1em
+        text-transform: uppercase
+        text-align: center
+        margin-bottom: 40px
+
+    .reasons_block
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 35px
+        min-height: 162px
+
+        .reasons_round
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 21px
+            background-color: #1eacc7
+            border-radius: 50%
+            width: 113px
+            height: 113px
+                
+        .reasons_descr
+            width: 341px   
+            font-size: 15px
+            font-family: $Roboto_Light
+            color: #202020
+            line-height: 1.235
+            text-align: justify
+ 
+            h3.reasons_title
+                margin: 0
+                font-size: 17px
+                color: rgb(30, 172, 199)
+                font-family: $Roboto_Regular
+
+            p.reasons_text
+                margin: 0
+                line-height: 1.4em
+
+
+
+            
+ 
+
+
+                
+
+    
