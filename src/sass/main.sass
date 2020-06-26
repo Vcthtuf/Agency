@@ -1,17 +1,7 @@
 
-// ==== Fonts ====
-
-@font-face
-    font-family: 'Roboto'
-    src: url(../fonts/Roboto-Regular.eot)
-    src: url(../fonts/Roboto-Regular.ttf)
-    src: url(../fonts/Roboto-Regular.woff)
-
-// === Variables ===
-
-$Roboto: 'Roboto', sans-serif
-
-// =================
+@import 'fonts'
+@import 'variables'
+@import 'media'
 
 // ====  General styles  ====
 
@@ -28,7 +18,7 @@ ul
     list-style-type: none
 
 body
-    width: 1920px
+    max-width: 1920px
     margin: 0 auto
 
 .label
@@ -60,108 +50,16 @@ body
 
 // ==== Styles for header ====
 
-header
-    position: relative
-    height: 50px
-    
-    nav
-        position: fixed
-        width: 100%
-        height: 50px
-        background-color: #212121
-        z-index: 5
+@import 'header'
 
-        ul.menu
-            display: flex
-            justify-content: space-between
-            margin: 0 auto
-            padding: 13px 70px
-
-            li.menu_item
-                border-right: 2px dotted #000
-                padding-right: 28px
-
-                a.menu_link
-                    font-size: 15px
-                    font-weight: 300
-                    color: rgb(255, 255, 255) 
-                    transition: 5s all 
-
-                    &:after
-                        content: ''
-                        display: block
-                        height: 1px
-                        width: 0%
-                        background-color: #fff
-                        transition: .1s all
-
-                    &:hover
-                        &:after
-                            width: 100%
-
-            li.menu_item:last-child
-                border: none
-
-    .subheader
-        background-color:rgba(0,0,0,0.6)
-        position: absolute
-        top: 50px
-        width: 100%
-        
-
-        a.subheader_logo
-            display: block
-            margin-top: 16px
-            margin-bottom: 4px
-            max-width: 100%
-
-        .subheader_official
-            font-size: 13px
-            font-weight: 100
-            color: rgba(255, 255, 255, 0.502)
-            text-align: left  
-            margin-bottom: 17px
-            line-height: 1em
-
-        .subheader_call
-            font-size: 12px
-            font-weight: 300
-            color: rgb(255, 255, 255)
-            text-align: right 
-            margin-top: 20px
-
-        a.subheader_phone
-            display: block
-            font-size: 22px
-            font-weight: 400
-            color: rgb(255, 255, 255)
-            text-transform: uppercase
-            text-align: right
-            line-height: 22px  
-
-        .subheader_btn
-            width: 182px
-            height: 56px
-            margin-top: 13px
-            padding: 0
-            background-image: linear-gradient(to bottom, #4ce2ff, #20afca)
-            border: none
-            border-radius: 4px
-            font-size: 14px
-            font-weight: 400
-            color: rgb(255, 255, 255)
-            text-transform: uppercase
-            text-align: center
-            text-shadow: 0.707px 0.707px 0px rgba(0, 0, 0, 0.21)
-            box-shadow: inset 0 -3px rgba(0,0,0,.12)
-
-section.promo
+.promo
     background: url('../img/bg/header_bg.jpg') center center/cover no-repeat
     text-align: center
     padding-bottom: 135px
     padding-top: 198px
+
     
-    h1.promo_header 
+    &_header 
         font-size: 60px
         font-weight: 900
         color: rgb(255, 255, 255)
@@ -170,7 +68,7 @@ section.promo
         line-height: 1em
     
 
-    h2.promo_subheader 
+    &_subheader 
         font-size: 36px
         font-weight: 700
         color: rgb(255, 255, 255)
@@ -179,7 +77,7 @@ section.promo
         margin-bottom: 25px
     
 
-    p.promo_descr 
+    &_descr 
         font-size: 18px
         font-weight: 400
         color: rgb(255, 255, 255)
@@ -193,6 +91,7 @@ section.promo
         border-radius: 4px
         width: 269px
         height: 73px
+        line-height: 73px
         font-size: 18px
         font-weight: 400
         color: rgb(255, 255, 255)
@@ -200,48 +99,48 @@ section.promo
         text-shadow: 0.707px 0.707px 0px rgba(0, 0, 0, 0.21) 
         box-shadow: inset 0 -3px rgba(0,0,0,.12) 
 
-section.reasons
+.reasons
     padding: 71px 0 65px 0
 
-    .reasons_block
+    &_block
         display: flex
         justify-content: center
         align-items: center
         margin-bottom: 35px
         min-height: 162px
 
-        .reasons_round
-            display: flex
-            justify-content: center
-            align-items: center
-            margin-right: 21px
-            background-color: #1eacc7
-            border-radius: 50%
-            width: 113px
-            height: 113px
-                
-        .reasons_descr
-            width: 341px   
-            font-size: 15px
-            font-weight: 300
-            color: #202020
-            line-height: 1.235
-            text-align: justify
+    &_round
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 21px
+        background-color: #1eacc7
+        border-radius: 50%
+        width: 113px
+        height: 113px
+            
+    &_descr
+        width: 341px   
+        font-size: 15px
+        font-weight: 300
+        color: #202020
+        line-height: 1.235
+        text-align: justify
  
-            h3.reasons_title
-                margin: 0
-                font-size: 17px
-                color: rgb(30, 172, 199)
-                font-weight: 400
+    &_title
+        margin: 0
+        font-size: 17px
+        color: rgb(30, 172, 199)
+        font-weight: 400
 
-            p.reasons_text
-                margin: 0
-                line-height: 1.4em
+    &_text
+        margin: 0
+        line-height: 1.4em
 
 .mobile
     position: relative
     padding: 48px 0 80px 0
-    background: url('/img/bg/MobileApp_bg.jpg') center center/cover no-repeat
+    background: url('../img/bg/MobileApp_bg.jpg') center center/cover no-repeat
 
     .label
         margin-bottom: 42px
@@ -259,22 +158,22 @@ section.reasons
         margin-bottom: 19px
 
     &_item_1
-        background: url('/img/bg/MobileApp_1.jpg') center center/cover no-repeat
+        background: url('../img/bg/MobileApp_1.jpg') center center/cover no-repeat
     
     &_item_2
-        background: url('/img/bg/MobileApp_2.jpg') center center/cover no-repeat
+        background: url('../img/bg/MobileApp_2.jpg') center center/cover no-repeat
     
     &_item_3
-        background: url('/img/bg/MobileApp_3.jpg') center center/cover no-repeat
+        background: url('../img/bg/MobileApp_3.jpg') center center/cover no-repeat
 
     &_item_4
-        background: url('/img/bg/MobileApp_4.jpg') center center/cover no-repeat
+        background: url('../img/bg/MobileApp_4.jpg') center center/cover no-repeat
     
     &_item_5
-        background: url('/img/bg/MobileApp_5.jpg') center center/cover no-repeat
+        background: url('../img/bg/MobileApp_5.jpg') center center/cover no-repeat
     
     &_item_6
-        background: url('/img/bg/MobileApp_6.jpg') center center/cover no-repeat
+        background: url('../img/bg/MobileApp_6.jpg') center center/cover no-repeat
 
     &_title  
         font-size: 24px
@@ -345,7 +244,7 @@ section.reasons
             transform: translateX(-50%)
     &_bottom
         padding: 218px 0 130px 0
-        background: url('/img/bg/MobileApp_bg.jpg') center center/cover no-repeat
+        background: url('../img/bg/MobileApp_bg.jpg') center center/cover no-repeat
 
         &_text
             font-size: 17px
@@ -385,7 +284,7 @@ section.reasons
             left: -35px
             width: 22px
             height: 21px            
-            background: url('/icon/Check_blue.png') center center/cover no-repeat
+            background: url('../icon/Check_blue.png') center center/cover no-repeat
     
     &_descr
         font-size: 17px
@@ -400,12 +299,12 @@ section.reasons
 
             &_list li
                 &:before
-                    background: url('/icon/Check_red.png') center center/cover no-repeat
+                    background: url('../icon/Check_red.png') center center/cover no-repeat
 
 .map
     padding: 49px 0
     text-align: center
-    background: url('/img/jpg/map.jpg') center center/cover no-repeat
+    background: url('../img/jpg/map.jpg') center center/cover no-repeat
     
     &_label
         width: 76px
@@ -443,90 +342,8 @@ section.reasons
         color: rgb(31, 186, 214)
         text-transform: uppercase
 
-footer
-    border-bottom: 8px solid rgb(7, 7, 22)
-    padding: 14px 0 31px 0
 
-.footer
-    display: flex
-    justify-content: space-between
-    align-items: center
-    margin: 0 23px 10px 23px
-
-    &_line
-        width: 299px
-        height: 4px
-        margin: 0 auto 32px auto
-        background-color: rgb(31, 186, 214)
-    
-    &_socials
-        display: flex
-        width: 33.33%
-
-    &_social
-        display: flex
-        justify-content: center
-        align-items: center
-        width: 32px
-        height: 32px
-        border-radius: 50%
-        background-color: rgb(7, 7, 22)
-        margin-right: 9px
-
-        a
-            display: block
-            width: 100%
-            height: 100%
-            text-align: center
-            cursor: pointer
-
-    &_mobile
-        display: flex
-        justify-content: flex-end
-
-        width: 33.33%
-        a 
-            margin-left: 6px
-
-            img 
-                border-radius: 3px
-            
- 
-    &_links
-        width: 33.33%
-
-        &_main
-            display: flex
-            justify-content: space-between
-            width: 368px
-            margin: 0 auto 10px auto
-    
-            a
-                font-size: 15px
-                font-weight: 300
-                color: rgb(7, 7, 22)
-                text-transform: uppercase
-              
-        &_secondary
-            display: flex
-            justify-content: space-between
-            width: 394px
-            margin: 0 auto 10px auto
-
-            a        
-                font-size: 11px
-                font-weight: 300
-                color: rgb(153, 153, 153)
-                text-transform: uppercase
-    
-    &_lang     
-        text-align: center 
-        
-        a 
-            font-size: 11px
-            font-weight: 400
-            color: rgb(31, 186, 214)
-            text-transform: uppercase
+@import 'footer'
             
  
 

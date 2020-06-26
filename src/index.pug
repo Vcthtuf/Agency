@@ -7,10 +7,10 @@ html(lang="ru")
         meta(name="author" content="Melnikov Sergey")
         title UBER course
         link(rel="stylesheet" href="css/bootstrap-grid.min.css")
-        link(rel="stylesheet", href="css/normalize.css")
+        link(rel="stylesheet", href="css/normalize-min.css")
         link(rel="stylesheet" href="css/main.css")
     body
-        header
+        header.header
             nav
                 .container
                     ul.menu
@@ -33,7 +33,7 @@ html(lang="ru")
                             a.subheader_logo(href="#") 
                                 img.subheader_logo(src="img/logo.png", alt="Logo")
                             .subheader_official Официальный партнер Uber в Москве
-                        .col-md-2.offset-md-2
+                        .col-md-3.offset-md-1.col-xl-2.offset-xl-2
                             .subheader_call Звоните нам ежедневно
                             a.subheader_phone(href="tel:+74957970988") 8 495 797 09 88
                         .col-md-2
@@ -41,7 +41,7 @@ html(lang="ru")
         section.promo
             .container
                 .row
-                    .col-md-10.offset-md-1
+                    .col-md-12.col-xl-10.offset-xl-1
                         h1.promo_header КОМПАНИЯ UBER PARTNERS
                         h2.promo_subheader ПРИГЛАШАЕМ ВОДИТЕЛЕЙ! НА СВОЕМ АВТО!
                         p.promo_descr Компания UBER  динамически развивающаяся. Компания на рынке занимает лидирующее место среди таксомоторных компаний, Компания абсолютно прозрачная вы можете контролировать все процессы у себя в личном кабинете. Бонуcная система.Помимо выполненной работы по заказам, компания начисляет бонусы за пиковое время.<br><br>Мы одни из партнеров и зарекомендовали себя как одна из лучших команд в городе Москве.  Водители у нас зарабатывают от 80000- 120000 в месяц.
@@ -239,10 +239,10 @@ html(lang="ru")
                         a(href="#") о нас
                 .footer_mobile
                     a(href="#")
-                        img(src="/icon/footer_appstore.jpg", alt="AppStore")
+                        img(src="icon/footer_appstore.jpg", alt="AppStore")
                     a(href="#")
-                        img(src="/icon/footer_googleplay.jpg", alt="Google Play")
+                        img(src="icon/footer_googleplay.jpg", alt="Google Play")
                     a(href="#")
-                        img(src="/icon/footer_Windows_Store.jpg", alt="Windows Store")
+                        img(src="icon/footer_Windows_Store.jpg", alt="Windows Store")
             .footer_lang 
                 a(href="#") русский
