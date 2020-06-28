@@ -1,162 +1,191 @@
 @media (max-width: 1199px)
     .header
-        nav
-            .menu
-                &_item
-                    padding: 0 15px    
-                &_link
-                    font-size: 13px
-    section.promo
+        .menu
+            &_item
+                padding: 0 15px    
+            &_link
+                font-size: 13px
+    .promo
         padding: 100px 0 75px 0
 
-        h1.promo_header 
+        &_header 
             font-size: 50px
             
-        h2.promo_subheader 
+        &_subheader 
             font-size: 30px 
 
-        p.promo_descr 
+        &_descr 
             margin-bottom: 62px
 
-    section.reasons 
+    .reasons 
 
         padding: 50px 0 30px 0
 
         h2.title 
             font-size: 30px
 
-        .reasons_descr
+        &_descr
             width: 300px
 
-        .reasons_block
+        &_block
             align-items: flex-start
 
-    section.mobile 
+    .mobile 
 
-        .mobile_item
+        &_item
             width: 300px
 
-    section.choose 
+    .choose 
 
-        .choose_bottom
+        &_bottom
             padding: 200px 0 50px 0 
 
-    section.require
+    .require
         padding-top: 30px
 
-        .require_block
+        &_block
             width: 450px
 
-    section.map 
+    .map 
 
-        .map_subtitle
+        &_subtitle
             margin-bottom: 200px
 
     .footer
 
-        .footer_mobile
+        &_mobile
             flex-direction: column
             align-items: flex-end
         
-        .footer_socials
+        &_socials
             width: 25%
 
-        .footer_links
+        &_links
             width: 50%
 
-        .footer_mobile
+        &_mobile
             width: 25%
 
     // ===============
 
 @media (max-width: 991px)
     .header
-        .subheader
         
-            .subheader_logo
+        .menu
+            &_item
+                padding: 0
+                padding-right: 17px
+            &_link
+                font-size: 11px
 
+        .subheader
+            
+            &_logo
                 img
                     width: 100%
 
-            .subheader_official
-                margin-left: 25px
-            
-            .subheader_phone
+            &_official
+                font-size: 11px
+           
+            &_phone
                 font-size: 19px
-
-            .subheader_btn
+ 
+            &_btn
                 width: 150px
                 height: 45px
+                margin-top: 16px
 
-            .subheader_descr
-                margin-bottom: 40px
-                font-size: 16px
-    
-    section.promo
-        padding: 75px 0 50px 0
-
-        h1.promo_header 
+    .promo
+       
+        &_header 
             font-size: 40px
             
-        h2.promo_subheader 
-            font-size: 22px 
+            
+        &_subheader 
+            font-size: 25px
 
-        p.promo_descr 
-            margin-bottom: 62px
+        &_descr 
+            font-size: 15px
 
-        button.promo_btn 
-            width: 220px
-            height: 45px
-            line-height: 45px
-
-    section.reasons 
-
-        padding: 50px 0 30px 0
+        &_btn 
+            width: 250px
+            height: 60px
+            line-height: 60px
+            
+    .reasons 
 
         h2.title 
-            font-size: 30px
+            font-size: 25px        
+  
+        &_block
+            flex-direction: column
+            align-items: center
 
-        .reasons_descr
-            width: 300px
+        &_round
+            margin: 0 0 20px 0
+           
+    .mobile 
+        padding: 30px 0 40px
 
-        .reasons_block
-            align-items: flex-start
+        .label
+            margin-bottom: 20px
 
-    section.mobile 
+        .title
+            margin: 20px 0
+            font-size: 25px
 
-        .mobile_item
-            width: 300px
+        &_item
+            width: 210px
+            height: 240px
+            padding: 50px 10px 0
 
-    section.choose 
+        &_title
+            font-size: 20px
+   
+    .choose 
 
-        .choose_bottom
-            padding: 200px 0 50px 0 
-
-    section.require
-        padding-top: 30px
-
-        .require_block
-            width: 450px
-
-    section.map 
-
-        .map_subtitle
-            margin-bottom: 200px
+        &_top_img
+            width: 100%
+           
+    .require
+        
+        &_block
+            width: 330px
 
     .footer
 
-        .footer_mobile
+        &_links_secondary
+            width: 368px
+            
+        &_mobile
+            padding-right: 20px
+
+@media (max-width: 767px)
+
+    header
+        nav
+           height: 0
+        .menu
             flex-direction: column
-            align-items: flex-end
-        
-        .footer_socials
-            width: 25%
-
-        .footer_links
+            justify-content: space-around
+            align-items: center
+            position: fixed
+            top: 0
+            left: -100%
             width: 50%
+            height: 100vh
+            padding: 10px 0
+            background-color: rgba(0,0,0,0.8)
+            transition: 0.7s left
 
-        .footer_mobile
-            width: 25%
+            &_active
+                left: 0
+
+            .menu_item
+                padding: 0
+                border: none
+            
+           
 
     
 
