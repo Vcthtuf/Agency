@@ -1,11 +1,14 @@
-
 @import 'fonts'
 @import 'variables'
 
 // ====  General styles  ====
 
 *
-    font-family: $Roboto
+    font-family: $Lato
+
+*:focus
+    outline: none
+    outline-offset: none
 
 a
     text-decoration: none
@@ -16,12 +19,518 @@ a, button
 ul
     list-style-type: none
 
+.divide
+    background-color: $blue
+    width: 73px
+    height: 4px
+    margin: 180px 0 33px
+
 body
-    max-width: 1920px
+    max-width: 1400px
+    width: 100%
     margin: 0 auto
 
+.container
+    max-width: 1170px
+    width: 100%
+    margin: 0 auto
 
-@import 'media'
+.header
+    position: relative
+    background: url(../img/bg/bg_header.jpg) center center/cover no-repeat
+    //padding-top: 116px
+    padding-bottom: 185px
+
+    &_nav
+        display: flex
+        justify-content: space-between
+        align-items: center
+        // position: fixed
+        //top: 0
+        width: inherit
+        max-width: inherit
+        height: 116px
+        z-index: 2
+
+    &_logo
+        
+      
+    &_menu
+        display: flex
+        justify-content: space-between
+        align-item: center
+        width: 390px
+    
+    &_item
+
+        &:hover          
+            transform: scale(1.2)
+            a
+                color: $blue
+
+        a 
+            font-size: 18px
+            font-family: $Lato
+            color: $white
+            
+    &_title     
+        font-size: 68px
+        font-family: $Lato
+        color: $white
+        font-weight: 700
+        line-height: 1.2
+        letter-spacing: 0.1rem
+        width: 720px
+        margin-bottom: 26px
+
+    &_subtitle
+        font-size: 18px
+        font-family: $Merri
+        color: $white
+        margin-bottom: 35px
+
+    &_btn
+        border-width: 1px
+        border-color: $white
+        border-style: solid
+        border-radius: 22px
+        background-color: transparent
+        width: 170px
+        height: 44px   
+        font-size: 18px
+        font-family: $Lato
+        color: $white
+        line-height: 0.267
+        text-align: center
+
+        &:hover
+            color: $blue
+            transform: scale(1.2)
+            border-color: $blue
+    
+    .arrow
+        display: block
+        position: absolute
+        bottom: 40px
+        padding: 0 5px
+        cursor: pointer
+        &:hover
+            transform: scale(1.2)
+
+    .arrow_left
+        right: 164px
+
+    .arrow_right
+        right: 115px
+
+.who
+    padding: 99px 0 159px
+
+    &_title  
+        font-size: 36px
+        font-family: $Lato
+        color: rgb(52, 52, 52)
+        font-weight: 700
+        text-align: center
+        margin-bottom: 39px
+
+    &_text  
+        font-size: 18px
+        font-family: $Merri
+        color: rgb(151, 151, 151)
+        line-height: 1.4
+        text-align: center
+        margin: 0 auto
+        width: 600px
+
+.quotes
+    background: url('../img/bg/bg_client.jpg') center center/cover no-repeat
+    padding: 113px 0 30px
+
+    .quote
+        position: relative
+        width: 530px
+        margin: 0 auto
+        font-size: 18px
+        color: $white
+        line-height: 1.4
+        text-align: center
+
+        &_text
+            font-family: $Merri
+            font-size: 18px
+            margin-bottom: 20px
+
+        &_author
+            font-family: $Merri
+            text-align: center
+            margin-bottom: 70px
+
+        &_img
+            position: absolute
+            top: -113px
+            left: 50%
+            transform: translate(-50%, -50%)
+
+    .paginator
+        display: flex
+        justify-content: space-between
+        margin: 0 auto
+        width: 78px
+
+        .circle
+            width: 12px
+            height: 12px
+            border-radius: 50%;
+            background-color: $white
+            cursor: pointer
+            &:hover
+                transform: scale(1.3333)
+
+.services
+    padding: 100px 0 40px
+
+    &_title
+        font-family: $Lato
+        font-weight: 700
+        font-size: 36px
+        color: rgb(52, 52, 52)
+        text-align: center
+        margin-bottom: 35px
+
+    &_text
+        width: 670px
+        margin: 0 auto 100px auto
+        font-family: $Merri
+        font-weight: 400  
+        font-size: 18px
+        color: rgb(151, 151, 151)
+        line-height: 1.4
+        text-align: center
+
+    &_block
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+       
+
+        .item
+            width: 380px
+            margin-bottom: 60px
+
+            &_img
+                display: block
+                margin: 0 auto
+                margin-bottom: 35px
+
+            &_title         
+                font-size: 17px
+                font-family: $Merri
+                color: rgb(151, 151, 151)
+                text-align: center
+                margin-bottom: 25px
+
+            &_descr
+                height: 65px
+                overflow: hidden
+                font-size: 14px
+                letter-spacing: 0.02em
+                font-family: $Roboto
+                color: rgb(132, 132, 132)
+                line-height: 1.2
+                text-align: center
+
+.study
+
+    .container
+        display: flex
+        justify-content: space-between
+
+        .text
+            width: auto
+
+            .divide
+                margin: 122px 0 57px
+
+        .video
+            width: 675 / 1170 * 100%
+            position: relative
+
+    &_title
+        width: 290px
+        font-size: 36px
+        font-family: $Lato
+        color: rgb(52, 52, 52)
+        font-weight: 700
+        line-height: 1.2
+        text-align: left
+        margin-bottom: 40px
+
+    &_descr
+        font-size: 18px
+        font-family: $Merri
+        color: rgb(151, 151, 151)
+        line-height: 1.2
+        text-align: left
+
+    &_img
+        width: 100%
+        background-color: rgb(221, 221, 221)
+        box-shadow: 0px 0px 65px 0px rgba(52, 52, 52, 0.15)
+ 
+    &_play
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        cursor: pointer
+
+.portfolio
+    padding: 100px 0 
+
+    &_title
+        font-family: $Lato
+        font-weight: 700     
+        font-size: 36px
+        color: rgb(52, 52, 52)
+        text-align: center
+        margin-bottom: 42px
+ 
+    &_descr
+        margin: 0 auto 55px auto
+        font-family: $Merri
+        font-weight: 400
+        width: 600px     
+        font-size: 18px
+        color: rgb(151, 151, 151)
+        line-height: 1.2
+        text-align: center
+
+    .block
+
+        &_top
+            display: flex
+            
+            img:first-child
+                margin-bottom: 25px
+            img:nth-child(2)
+                margin-right: 25px
+
+        &_bottom
+
+            img:first-child
+                margin-right: 25px
+
+.clients
+    padding: 105px 0 100px
+    background: url('../img/bg/bg_our_clients.jpg') center center/cover no-repeat
+    
+    &_title        
+        font-size: 36px
+        font-family: $Lato
+        font-weight: 700
+        color: rgb(255, 255, 255)
+        font-weight: bold
+        text-align: center
+        margin-bottom: 40px
+
+    &_text
+        width: 625px
+        margin: 0 auto 82px auto
+        font-family: $Merri    
+        font-size: 18px
+        color: rgb(255, 255, 255)
+        line-height: 1.2
+        text-align: center
+  
+    &_img
+        width: 100%
+
+.team
+    padding: 100px 0
+    &_title    
+        font-size: 36px
+        font-family: $Lato
+        color: rgb(52, 52, 52)
+        font-weight: 700
+        text-align: center
+        margin-bottom: 25px
+    &_text   
+        font-size: 18pxs
+        font-family: $Merri
+        color: rgb(151, 151, 151)s
+        line-height: 1.2s
+        text-align: center
+        margin-bottom: 50px
+    &_block
+        display: flex
+        justify-content: space-between
+    &_img
+        margin-bottom: 19px
+    &_name        
+        font-size: 18px
+        font-family: $Lato
+        color: rgb(134, 134, 134)
+        text-align: center
+        margin-bottom: 5px
+    &_proffesional     
+        font-size: 18px
+        font-family: $Lato
+        color: rgb(134, 134, 134)
+        text-align: center
+
+.map
+    position: relative
+    height: 513px
+    background-color: #777777
+    .location
+    .indicator
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 19px
+        height: 19px
+        background-color: $blue
+        border-radius: 50%
+        border: 15px solid #fff
+
+.contacts
+    padding: 64px 0
+
+    &_title
+        margin-bottom: 50px  
+        font-size: 36px
+        font-family: $Lato
+        color: rgb(52, 52, 52)
+        font-weight: 700
+        text-align: center
+
+    form
+        width: 585px
+        margin: 0 auto
+        margin-bottom: 50px
+        
+        fieldset
+            pading: 0
+            padding-inline-start: 0
+            padding-inline-end: 0
+            padding-block-end: 0
+            border: none
+
+            input
+                width: 251px
+                height: 44px
+                margin: 0 27px 20px 0 
+                padding: 2px 0 2px 20px        
+                border: 1px solid rgb(134, 134, 134)
+                border-radius: 3px         
+                font-size: 18px
+                font-family: $Lato
+                color: rgb(134, 134, 134)
+
+            input:nth-child(2), input:last-child
+                margin-right: 0
+        textarea
+            width: 540px
+            height: 100px
+            padding: 15px 20px
+            border-width: 1px
+            border-color: rgb(134, 134, 134)
+            border-style: solid
+            border-radius: 3px
+            font-size: 18px
+            font-family: $Lato
+            color: rgb(134, 134, 134)
+            resize: none
+    &_btn
+        display: block
+        margin: 0 auto
+        font-size: 18px
+        font-family: $Lato
+        color: $white
+        text-align: center
+        background-color: $blue
+        width: 228px
+        height: 46px
+        border: 0
+        border-radius: 16px
+        cursor: pointer
+
+.footer
+    padding: 32px 0
+    background-color: rgb(52, 52, 52)
+
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        ul 
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 360px
+
+            a
+                color: $white 
+                font-size: 18px
+                font-family: $Lato           
+
+        .social
+            display: flex
+            justify-content: space-between
+            align-items: center
+            color: $white
+            font-size: 30px
+            width: 180px
+
+            a
+                color: $white            
+    
+            .icon-facebook:before
+                content: "\ea90"
+            .icon-twitter:before
+                content: "\ea96"
+            .icon-google-plus:before
+                content: "\ea8b"
+
+        
+ 
+
+
+
+ 
+
+ 
+
+  
+
+
+
+  
+                
+  
+
+
+
+  
+
+
+        
+ 
+
+  
+ 
+
+      
+
+
+
+
+
+//@import 'media'
 
 
 
