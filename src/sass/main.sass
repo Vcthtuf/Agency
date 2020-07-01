@@ -1,10 +1,12 @@
 @import 'fonts'
 @import 'variables'
+ 
 
 // ====  General styles  ====
 
 *
     font-family: $Lato
+    font-size: 18px
 
 *:focus
     outline: none
@@ -32,29 +34,60 @@ body
 
 .container
     max-width: 1170px
-    width: 100%
+    width: 83.57142857142857%
     margin: 0 auto
+
+// ==== Styles for sections ====
 
 .header
     position: relative
-    background: url(../img/bg/bg_header.jpg) center center/cover no-repeat
-    //padding-top: 116px
+    width: 100%
+    max-width: 1400px
+    padding-top: 116px
     padding-bottom: 185px
+
+    .wrapper
+        position: absolute
+        top: 0
+        right: 0
+        width: 100%
+        height: 100%
+        overflow: hidden
+        z-index: -1
+
+        img
+            width: 100%
+            height: 100%
+            position: absolute
+
+        .slide_1
+            top: 0
+            right: -100%
+        
+        .slide_2
+            top: 0
+            right: 0
+        
+        .slide_3
+            top: 0
+            right: 100%
+
 
     &_nav
         display: flex
         justify-content: space-between
         align-items: center
-        // position: fixed
-        //top: 0
+        position: fixed
+        top: 0
         width: inherit
         max-width: inherit
+        margin: 0 auto
+        box-sizing: border-box
+        padding: 0 115px
         height: 116px
-        z-index: 2
-
-    &_logo
-        
-      
+        z-index: 1
+        background-color: transparent
+ 
     &_menu
         display: flex
         justify-content: space-between
@@ -69,25 +102,30 @@ body
                 color: $blue
 
         a 
-            font-size: 18px
-            font-family: $Lato
             color: $white
-            
+            text-transform: uppercase
+            font-weight: 700
+
+    &_nav_scroll
+        background-color: #fff
+
+        a
+            color: #000
+
     &_title     
         font-size: 68px
-        font-family: $Lato
         color: $white
         font-weight: 700
         line-height: 1.2
         letter-spacing: 0.1rem
-        width: 720px
-        margin-bottom: 26px
+        width: 60%
+        margin-bottom: 26px        
 
     &_subtitle
-        font-size: 18px
         font-family: $Merri
         color: $white
         margin-bottom: 35px
+        
 
     &_btn
         border-width: 1px
@@ -97,11 +135,9 @@ body
         background-color: transparent
         width: 170px
         height: 44px   
-        font-size: 18px
-        font-family: $Lato
         color: $white
         line-height: 0.267
-        text-align: center
+        text-align: center       
 
         &:hover
             color: $blue
@@ -114,6 +150,7 @@ body
         bottom: 40px
         padding: 0 5px
         cursor: pointer
+       
         &:hover
             transform: scale(1.2)
 
@@ -128,14 +165,12 @@ body
 
     &_title  
         font-size: 36px
-        font-family: $Lato
         color: rgb(52, 52, 52)
         font-weight: 700
         text-align: center
         margin-bottom: 39px
 
     &_text  
-        font-size: 18px
         font-family: $Merri
         color: rgb(151, 151, 151)
         line-height: 1.4
@@ -151,14 +186,12 @@ body
         position: relative
         width: 530px
         margin: 0 auto
-        font-size: 18px
         color: $white
         line-height: 1.4
         text-align: center
 
         &_text
             font-family: $Merri
-            font-size: 18px
             margin-bottom: 20px
 
         &_author
@@ -181,7 +214,7 @@ body
         .circle
             width: 12px
             height: 12px
-            border-radius: 50%;
+            border-radius: 50%
             background-color: $white
             cursor: pointer
             &:hover
@@ -191,7 +224,6 @@ body
     padding: 100px 0 40px
 
     &_title
-        font-family: $Lato
         font-weight: 700
         font-size: 36px
         color: rgb(52, 52, 52)
@@ -199,11 +231,10 @@ body
         margin-bottom: 35px
 
     &_text
-        width: 670px
+        width: 70%
         margin: 0 auto 100px auto
         font-family: $Merri
         font-weight: 400  
-        font-size: 18px
         color: rgb(151, 151, 151)
         line-height: 1.4
         text-align: center
@@ -211,13 +242,14 @@ body
     &_block
         display: flex
         flex-wrap: wrap
-        justify-content: space-between
+        justify-content: space-evenly
         align-items: center
        
 
         .item
-            width: 380px
+            width: 32.4%
             margin-bottom: 60px
+            margin-right: 10px
 
             &_img
                 display: block
@@ -248,7 +280,7 @@ body
         justify-content: space-between
 
         .text
-            width: auto
+            width: 460 / 1170 * 100%
 
             .divide
                 margin: 122px 0 57px
@@ -260,7 +292,6 @@ body
     &_title
         width: 290px
         font-size: 36px
-        font-family: $Lato
         color: rgb(52, 52, 52)
         font-weight: 700
         line-height: 1.2
@@ -268,7 +299,7 @@ body
         margin-bottom: 40px
 
     &_descr
-        font-size: 18px
+        width: 100%
         font-family: $Merri
         color: rgb(151, 151, 151)
         line-height: 1.2
@@ -290,7 +321,6 @@ body
     padding: 100px 0 
 
     &_title
-        font-family: $Lato
         font-weight: 700     
         font-size: 36px
         color: rgb(52, 52, 52)
@@ -302,25 +332,50 @@ body
         font-family: $Merri
         font-weight: 400
         width: 600px     
-        font-size: 18px
         color: rgb(151, 151, 151)
         line-height: 1.2
         text-align: center
 
     .block
+        width: 100%
 
+        
         &_top
             display: flex
+            justify-content: space-between
+            margin-bottom: 25px
             
+            
+
+        &_left
+            width: 68.1%
+            margin-right: 2%
+            img
+                width: 100%
             img:first-child
-                margin-bottom: 25px
-            img:nth-child(2)
-                margin-right: 25px
+                margin-bottom: 2.5%
+            img:nth-child(2) 
+                width: 48.2%
+                margin-right: 3.5%
+            img:last-child
+                width: 48.2%
+
+        &_right 
+            width: 32.5%
+            height: 50.97008547008547%
+
+            img
+                width: 100%
+            
+            
 
         &_bottom
 
             img:first-child
-                margin-right: 25px
+                margin-right: 2%
+                width: 32%
+            img:last-child
+                width: 66%
 
 .clients
     padding: 105px 0 100px
@@ -328,7 +383,6 @@ body
     
     &_title        
         font-size: 36px
-        font-family: $Lato
         font-weight: 700
         color: rgb(255, 255, 255)
         font-weight: bold
@@ -339,7 +393,6 @@ body
         width: 625px
         margin: 0 auto 82px auto
         font-family: $Merri    
-        font-size: 18px
         color: rgb(255, 255, 255)
         line-height: 1.2
         text-align: center
@@ -351,13 +404,11 @@ body
     padding: 100px 0
     &_title    
         font-size: 36px
-        font-family: $Lato
         color: rgb(52, 52, 52)
         font-weight: 700
         text-align: center
         margin-bottom: 25px
     &_text   
-        font-size: 18pxs
         font-family: $Merri
         color: rgb(151, 151, 151)s
         line-height: 1.2s
@@ -366,19 +417,27 @@ body
     &_block
         display: flex
         justify-content: space-between
+        flex-wrap: wrap
     &_img
-        margin-bottom: 19px
+        margin: 0 auto 19px auto
+       
+
+        img
+            width: 100%
+
+
     &_name        
-        font-size: 18px
-        font-family: $Lato
         color: rgb(134, 134, 134)
         text-align: center
         margin-bottom: 5px
     &_proffesional     
-        font-size: 18px
-        font-family: $Lato
         color: rgb(134, 134, 134)
         text-align: center
+    &_item
+        padding-right: 25px
+        flex-basis: 23%
+    &_item:last-child
+        padding-right: 0
 
 .map
     position: relative
@@ -402,7 +461,6 @@ body
     &_title
         margin-bottom: 50px  
         font-size: 36px
-        font-family: $Lato
         color: rgb(52, 52, 52)
         font-weight: 700
         text-align: center
@@ -426,8 +484,6 @@ body
                 padding: 2px 0 2px 20px        
                 border: 1px solid rgb(134, 134, 134)
                 border-radius: 3px         
-                font-size: 18px
-                font-family: $Lato
                 color: rgb(134, 134, 134)
 
             input:nth-child(2), input:last-child
@@ -440,15 +496,11 @@ body
             border-color: rgb(134, 134, 134)
             border-style: solid
             border-radius: 3px
-            font-size: 18px
-            font-family: $Lato
             color: rgb(134, 134, 134)
             resize: none
     &_btn
         display: block
         margin: 0 auto
-        font-size: 18px
-        font-family: $Lato
         color: $white
         text-align: center
         background-color: $blue
@@ -473,97 +525,36 @@ body
             align-items: center
             width: 360px
 
+            li:hover 
+                transform: scale(1.1)
+
+                a           
+                    color: $blue   
+
             a
-                color: $white 
-                font-size: 18px
-                font-family: $Lato           
+                color: $white
+                text-transform: uppercase 
+            
 
         .social
             display: flex
             justify-content: space-between
             align-items: center
-            color: $white
-            font-size: 30px
             width: 180px
 
             a
-                color: $white            
+                color: $white    
     
             .icon-facebook:before
                 content: "\ea90"
+                font-size: 28px  
             .icon-twitter:before
                 content: "\ea96"
+                font-size: 28px  
+
             .icon-google-plus:before
                 content: "\ea8b"
+                font-size: 28px  
 
-        
+@import 'media'
  
-
-
-
- 
-
- 
-
-  
-
-
-
-  
-                
-  
-
-
-
-  
-
-
-        
- 
-
-  
- 
-
-      
-
-
-
-
-
-//@import 'media'
-
-
-
-
-            
- 
-
-  
-
-
-  
-
-    
-
-
-        
- 
-  
-
-  
-
-
-    
-  
-
-
-
-
-
-            
- 
-
-
-                
-
-    

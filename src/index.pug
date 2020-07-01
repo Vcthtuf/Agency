@@ -11,30 +11,34 @@ html(lang="ru")
         link(rel="stylesheet", href="css/normalize-min.css")
         link(rel="stylesheet" href="css/main.css")
     body
-        header.header
+        header.header#home
+            .wrapper.slider
+                img.slide_1#slide_1(src="img/jpg/slider/slide_1.jpg", alt="slide")
+                img.slide_2#slide_2(src="img/jpg/slider/slide_2.jpg", alt="slide")
+                img.slide_3#slide_3(src="img/jpg/slider/slide_3.jpg", alt="slide")
+            .header_nav#menu
+                .header_logo
+                    a(href="#")
+                        img(src="img/logo.png", alt="")
+                nav
+                    ul.header_menu
+                        li.header_item
+                            a.header_link#link(href="#home") HOME
+                        li.header_item
+                            a.header_link#link(href="#portfolio") Portfolio
+                        li.header_item
+                            a.header_link#link(href="#about") ABOUT
+                        li.header_item
+                            a.header_link#link(href="#contacts") CONTACT
             .container
-                .header_nav
-                    .header_logo
-                        a(href="#")
-                            img(src="img/logo.png", alt="")
-                    nav
-                        ul.header_menu
-                            li.header_item
-                                a.header_link(href="#") HOME
-                            li.header_item
-                                a.header_link(href="#") BLOG
-                            li.header_item
-                                a.header_link(href="#") ABOUT
-                            li.header_item
-                                a.header_link(href="#") CONTACT
                 .divide
                 h1.header_title CODING FOR<br>BETTER TOMORROW
                 .header_subtitle Project for Avocado
                 button.header_btn Case Study
-                img.arrow.arrow_left(src="icon/arrow_left.png", alt="arrow_left")
+                img.arrow.arrow_left#about(src="icon/arrow_left.png", alt="arrow_left")
                 img.arrow.arrow_right(src="icon/arrow_right.png", alt="arrow_right")
         section.who
-            .who_title WHO WE ARE
+            h2.title.who_title WHO WE ARE
             .who_text Small but very dedicated team, and we just love what we do! From wireframes, to photography, to backend, we are doing it all. Let’s make your dreams a reality!
         section.quotes
             .quote
@@ -48,7 +52,7 @@ html(lang="ru")
                 .circle
         section.services
             .container
-                .services_title OUR SERVICES
+                h2.title.services_title OUR SERVICES
                 .services_text From photo retouching, to Wordpress development, we got you covered. Browse bellow for just some services we are offering.
                 .services_block
                     .item
@@ -79,15 +83,15 @@ html(lang="ru")
             .container
                 .text
                     .divide
-                    .study_title ARIORI STUDIO CASE STUDY
-                    .study_descr How me made history with Ariori Studio
+                    h2.title.study_title ARIORI STUDIO CASE STUDY
+                    .study_descr#portfolio How me made history with Ariori Studio
                 .video
                     img.study_img(src="img/jpg/video.jpg", alt="video")
                     img.study_play(src="icon/play.png", alt="play")
         section.portfolio
             .container
                 .text
-                    .portfolio_title OUR PORTFOLIO
+                    h2.title.portfolio_title OUR PORTFOLIO
                     .portfolio_descr Small but very dedicated team, and we just love what we do! From wireframes, to photography, to backend, we are doing it all. <br> Check out our work!
                 .block
                     .block_top
@@ -102,12 +106,12 @@ html(lang="ru")
                         img.portfolio_img(src="img/jpg/portfolio/img_6.jpg", alt="portfolio")
         section.clients
             .container
-                .clients_title OUR CLIENTS
+                h2.title.clients_title OUR CLIENTS
                 .clients_text Just some of our awesome clients tat we had pleasure to work with. Will your logo be here as well?
                 img.clients_img(src="img/jpg/logos.png", alt="clients")
         section.team
             .container
-                .team_title MEET OUR TEAM
+                h2.title.team_title MEET OUR TEAM
                 .team_text These lovely people will make your dreams come true
                 .team_block
                     .team_item
@@ -133,8 +137,8 @@ html(lang="ru")
         section.map
             .location
             .indicator
-        section.contacts
-            .contacts_title CONTACT US
+        section.contacts#contacts
+            h2.title.contacts_title CONTACT US
             form.contact(action="get")
                 fieldset
                     input(type="text" placeholder='First Name') 
@@ -145,16 +149,16 @@ html(lang="ru")
             button.contacts_btn Send Message
         footer.footer
             .container
-                .menu
+                .footer_menu
                     ul
                         li.footer_item
-                            a.footer_link(href="#") HOME
+                            a.footer_link(href="#home") HOME
                         li.footer_item
-                            a.footer_link(href="#") BLOG
-                        lifooterr_item
-                            a.footer_link(href="#") ABOUT
+                            a.footer_link(href="#portfolio") portfolio
                         li.footer_item
-                            a.footer_link(href="#") CONTACT
+                            a.footer_link(href="#about") ABOUT
+                        li.footer_item
+                            a.footer_link(href="#contacts") CONTACT
                 .social
                     a(href="facebook.com")
                         .social_icon.icon-facebook
@@ -163,5 +167,5 @@ html(lang="ru")
                     a(href="googleplus.com")
                         .social_icon.icon-google-plus
 
-
+        //-script(src='js/jquery.min.js')
         //-script(src='js/script.js')

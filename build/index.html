@@ -12,27 +12,28 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="home">
+      <div class="wrapper slider"><img class="slide_1" id="slide_1" src="img/jpg/slider/slide_1.jpg" alt="slide"><img class="slide_2" id="slide_2" src="img/jpg/slider/slide_2.jpg" alt="slide"><img class="slide_3" id="slide_3" src="img/jpg/slider/slide_3.jpg" alt="slide"></div>
+      <div class="header_nav" id="menu">
+        <div class="header_logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
+        <nav>
+          <ul class="header_menu">
+            <li class="header_item"><a class="header_link" id="link" href="#home">HOME</a></li>
+            <li class="header_item"><a class="header_link" id="link" href="#portfolio">Portfolio</a></li>
+            <li class="header_item"><a class="header_link" id="link" href="#about">ABOUT</a></li>
+            <li class="header_item"><a class="header_link" id="link" href="#contacts">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
       <div class="container">
-        <div class="header_nav">
-          <div class="header_logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
-          <nav>
-            <ul class="header_menu">
-              <li class="header_item"><a class="header_link" href="#">HOME</a></li>
-              <li class="header_item"><a class="header_link" href="#">BLOG</a></li>
-              <li class="header_item"><a class="header_link" href="#">ABOUT</a></li>
-              <li class="header_item"><a class="header_link" href="#">CONTACT</a></li>
-            </ul>
-          </nav>
-        </div>
         <div class="divide"></div>
         <h1 class="header_title">CODING FOR<br>BETTER TOMORROW</h1>
         <div class="header_subtitle">Project for Avocado</div>
-        <button class="header_btn">Case Study</button><img class="arrow arrow_left" src="icon/arrow_left.png" alt="arrow_left"><img class="arrow arrow_right" src="icon/arrow_right.png" alt="arrow_right">
+        <button class="header_btn">Case Study</button><img class="arrow arrow_left" id="about" src="icon/arrow_left.png" alt="arrow_left"><img class="arrow arrow_right" src="icon/arrow_right.png" alt="arrow_right">
       </div>
     </header>
     <section class="who">
-      <div class="who_title">WHO WE ARE</div>
+      <h2 class="title who_title">WHO WE ARE</h2>
       <div class="who_text">Small but very dedicated team, and we just love what we do! From wireframes, to photography, to backend, we are doing it all. Let’s make your dreams a reality!</div>
     </section>
     <section class="quotes">
@@ -49,7 +50,7 @@
     </section>
     <section class="services">
       <div class="container">
-        <div class="services_title">OUR SERVICES</div>
+        <h2 class="title services_title">OUR SERVICES</h2>
         <div class="services_text">From photo retouching, to Wordpress development, we got you covered. Browse bellow for just some services we are offering.</div>
         <div class="services_block">
           <div class="item"><img class="item_img" src="icon/services/icon_1.png" alt="icon">
@@ -83,8 +84,8 @@
       <div class="container">
         <div class="text">
           <div class="divide"></div>
-          <div class="study_title">ARIORI STUDIO CASE STUDY</div>
-          <div class="study_descr">How me made history with Ariori Studio</div>
+          <h2 class="title study_title">ARIORI STUDIO CASE STUDY</h2>
+          <div class="study_descr" id="portfolio">How me made history with Ariori Studio</div>
         </div>
         <div class="video"><img class="study_img" src="img/jpg/video.jpg" alt="video"><img class="study_play" src="icon/play.png" alt="play"></div>
       </div>
@@ -92,7 +93,7 @@
     <section class="portfolio">
       <div class="container">
         <div class="text">
-          <div class="portfolio_title">OUR PORTFOLIO</div>
+          <h2 class="title portfolio_title">OUR PORTFOLIO</h2>
           <div class="portfolio_descr">Small but very dedicated team, and we just love what we do! From wireframes, to photography, to backend, we are doing it all. <br> Check out our work!</div>
         </div>
         <div class="block">
@@ -106,13 +107,13 @@
     </section>
     <section class="clients">
       <div class="container">
-        <div class="clients_title">OUR CLIENTS</div>
+        <h2 class="title clients_title">OUR CLIENTS</h2>
         <div class="clients_text">Just some of our awesome clients tat we had pleasure to work with. Will your logo be here as well?</div><img class="clients_img" src="img/jpg/logos.png" alt="clients">
       </div>
     </section>
     <section class="team">
       <div class="container">
-        <div class="team_title">MEET OUR TEAM</div>
+        <h2 class="title team_title">MEET OUR TEAM</h2>
         <div class="team_text">These lovely people will make your dreams come true</div>
         <div class="team_block">
           <div class="team_item">
@@ -142,8 +143,8 @@
       <div class="location"></div>
       <div class="indicator"></div>
     </section>
-    <section class="contacts">
-      <div class="contacts_title">CONTACT US</div>
+    <section class="contacts" id="contacts">
+      <h2 class="title contacts_title">CONTACT US</h2>
       <form class="contact" action="get">
         <fieldset>
           <input type="text" placeholder="First Name">
@@ -157,12 +158,12 @@
     </section>
     <footer class="footer">
       <div class="container">
-        <div class="menu">
+        <div class="footer_menu">
           <ul>
-            <li class="footer_item"><a class="footer_link" href="#">HOME</a></li>
-            <li class="footer_item"><a class="footer_link" href="#">BLOG</a></li>
-            <lifooterr_item><a class="footer_link" href="#">ABOUT</a></lifooterr_item>
-            <li class="footer_item"><a class="footer_link" href="#">CONTACT</a></li>
+            <li class="footer_item"><a class="footer_link" href="#home">HOME</a></li>
+            <li class="footer_item"><a class="footer_link" href="#portfolio">portfolio</a></li>
+            <li class="footer_item"><a class="footer_link" href="#about">ABOUT</a></li>
+            <li class="footer_item"><a class="footer_link" href="#contacts">CONTACT</a></li>
           </ul>
         </div>
         <div class="social"><a href="facebook.com">
