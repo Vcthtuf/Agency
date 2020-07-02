@@ -14,7 +14,7 @@ console.log(heightHeader);
         }
     });
 
-$(document).ready(function() { 
+/*(document).ready(function() { 
     $("nav ul li a").click(function () { 
         elementClick = $(this).attr("href"); 
         destination = $(elementClick).offset().top; 
@@ -28,7 +28,7 @@ $(document).ready(function() {
         destination = $(elementClick).offset().top; 
         $("body,html").animate({scrollTop: destination }, 800); 
     }); 
-});
+});*/
 
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.header_menu'),
