@@ -24,6 +24,7 @@
             <li class="header_item"><a class="header_link" id="link" href="#contacts">CONTACT</a></li>
           </ul>
         </nav>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
       </div>
       <div class="container">
         <div class="divide"></div>
@@ -99,7 +100,7 @@
         <div class="block">
           <div class="block_top">
             <div class="block_left"><img class="portfolio_img" src="img/jpg/portfolio/img_1.jpg" alt="portfolio"><img class="portfolio_img" src="img/jpg/portfolio/img_3.jpg" alt="portfolio"><img class="portfolio_img" src="img/jpg/portfolio/img_4.jpg" alt="portfolio"></div>
-            <div class="block_right"><img class="portfolio_img" src="img/jpg/portfolio/img_2.jpg" alt="portfolio"></div>
+            <div class="block_right"><img class="portfolio_img" src="img/jpg/portfolio/img_2.jpg" alt="portfolio"><img class="portfolio_img hidden up" src="img/jpg/portfolio/img_5.jpg" alt="portfolio"><img class="portfolio_img hidden down" src="img/jpg/portfolio/img_3.jpg" alt="portfolio"></div>
           </div>
           <div class="block_bottom"><img class="portfolio_img" src="img/jpg/portfolio/img_5.jpg" alt="portfolio"><img class="portfolio_img" src="img/jpg/portfolio/img_6.jpg" alt="portfolio"></div>
         </div>
@@ -151,10 +152,10 @@
           <input type="text" placeholder="Last Name">
           <input type="text" placeholder="Your Email">
           <input type="text" placeholder="Your Website">
+          <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
         </fieldset>
-        <textarea name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <button class="contacts_btn">Send Message</button>
       </form>
-      <button class="contacts_btn">Send Message</button>
     </section>
     <footer class="footer">
       <div class="container">
@@ -172,5 +173,7 @@
             <div class="social_icon icon-google-plus"></div></a></div>
       </div>
     </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

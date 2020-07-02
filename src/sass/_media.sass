@@ -74,7 +74,7 @@
     .map
         height: 450px
 
-@media (max-width: 992px)
+@media (max-width: 991px)
 
     *
         font-size: 15px
@@ -159,6 +159,360 @@
     .footer
         .container
             width: 90%
+
+@media (max-width: 767px)
+
+    .divide
+        display: none
+
+    h2.title 
+        font-size: 25px
+
+    .header
+        padding: 70px 0 28px
+
+        .hamburger
+            display: block
+
+        &_nav
+            height: 90px
+
+        &_title
+            font-size: 28px
+            width: 70%
+            margin-bottom: 40px
+
+        &_subtitle
+            display: none
+
+        &_btn
+            display: block
+            margin: 0 auto
+
+        .arrow_right
+            right: 90px
+
+        .arrow_left
+            right: 0
+            left: 90px
+
+        &_nav
+            nav
+
+                .header_menu
+                    flex-direction: column
+                    justify-content: space-around
+                    align-items: center
+                    position: fixed
+                    top: 0
+                    left: -100%
+                    width: 50%
+                    height: 50vh
+                    padding: 10px 0
+                    background-color: rgba(0,0,0,0.8)
+                    transition: 0.7s left
+
+                    &_active
+                        left: 0
+
+                    .header_item
+                        padding: 0
+                        border: none
+                        width: 100%
+                        text-align: center
+                        padding: 5px 0
+
+                    .header_link
+                        display: block
+                        width: 100%
+                    
+                    .header_link:hover
+                        &:after
+                            width: 0
+
+                    &_title
+            
+    .who
+        padding: 20px 0 60px
+
+        &_text
+            width: 80%
+
+    .quotes
+        padding: 70px 0 20px
+
+        .quote
+            width: 80%
+
+            &_img
+                top: -70px
+            
+            &_author
+                margin-bottom: 30px
+
+        .paginator
+            .circle
+                width: 8px
+                height: 8px
+
+    .services
+        padding: 20px 0
+
+        &_text
+            width: 100%
+
+        .item
+            margin-right: 0
+            width: 100%
+
+            &_img
+                margin-bottom: 25px
+                width: 15%
+
+    .study
+        .container
+            flex-direction: column
+            align-items: center
+
+            .text
+                width: 80%
+
+            .video
+                width: 70%
+
+        &_title
+            width: 100%
+            text-align: center
+            margin-top: 0
+
+        &_descr
+            display: none
+
+        &_play
+            width: 20%
+            height: auto
+
+    .portfolio
+        padding: 30px 0 60px
+
+        &_title
+            margin-bottom: 20px
+
+        &_descr
+            width: 100%
+
+        .block
+            &_top
+                flex-direction: column
+            &_left
+                margin: 0 0 2% 0
+                width: 100%
+            &_right
+                position: relative
+                width: 100%
+                img
+                    width: 48%
+
+                    &:first-child
+                        margin-right: 2%
+                img.hidden 
+                    display: block
+
+                    &.up
+                        position: absolute
+                        top: 0
+                        left: 52% 
+                    &.down
+                        position: absolute
+                        top: 52%
+                        left: 52% 
+
+            &_bottom
+
+                img:first-child
+                    display: none
+                img:last-child
+                    width: 100%
+
+    .clients
+        padding: 20px 0
+
+        &_title
+            margin-bottom: 20px
+
+        &_text
+            width: 100%
+
+    .team
+        padding: 20px 0
+
+        &_text
+            margin-bottom: 25px
+
+        &_item
+            flex-basis: 60%
+            margin-bottom: 30px
+            padding-bottom: 10px
+            border-bottom: 1px solid #777777
+            &:last-child
+                border-bottom: none
+
+        &_img
+            margin-bottom: 10px
+
+    .map
+        height: 350px
+    
+    .contacts
+
+        form
+            width: 80%
+            text-align: center
+
+            fieldset
+                text-align: center
+
+                input
+                    width: 75%
+                    margin-right: 0
+
+                textarea             
+                    width: 79%
+                    margin: 0 auto 30px auto
+
+    .footer
+        padding: 20px 0
+
+        &_menu
+            width: 30%
+
+        .container
+            justify-content: space-around
+
+            ul
+                flex-direction: column
+                justify-content: space-between
+                width: 100%
+                margin: 0
+                padding: 0
+
+                li
+                    width: 100%
+                    padding: 10px 0
+                    text-align: center
+            
+            .social
+                flex-direction: column
+                width: 30%
+                height: 137.2px
+                
+                a
+                    width: 50% 
+                    padding: 10px 0
+                    text-align: center
+
+                &_icon:before
+                    font-size: 20px
+
+@media (max-width: 585px)
+
+    *
+        font-size: 10px
+
+    h2.title 
+        font-size: 18px
+
+    .header
+
+        &_nav
+            height: 70px
+
+        .hamburger
+            top: 25px
+
+        &_logo
+            width: 100px
+
+            img
+                width: 100%
+
+        &_title
+            width: 85%
+            font-size: 20px
+            margin-bottom: 30px
+
+        &_btn
+            width: 100px
+            height: 30px
+
+        .arrow_left
+            display: none
+        .arrow_right
+            display: none
+
+    .services
+        .item
+            margin-bottom: 30px
+
+            &_img
+                margin-bottom: 15px
+            &_title
+                margin-bottom: 10px
+            &_descr
+                font-size: 11px
+
+    .study
+        .container
+            .text
+                width: 100%
+        &_title
+            margin-bottom: 15px
+
+    .portfolio
+        padding-bottom: 30px
+        &_title
+            margin-bottom: 10px
+        &_descr
+            font-size: 10px
+            margin-bottom: 20px
+
+        .block
+
+            &_top
+                margin-bottom: 0
+
+            &_right
+                display: none
+
+            &_left
+                img:nth-child(2)
+                    margin: 0 0 2% 0
+                    width: 100%
+                img:last-child
+                    margin: 0 0 2% 0
+                    width: 100%
+
+    .map
+        height: 220px
+
+    .contacts
+        padding-bottom: 0
+        form
+            fieldset
+
+                input
+                    height: 30px
+                    margin-bottom: 10px
+
+                textarea
+                    width: 84%
+                    margin-bottom: 15px
+
+        &_btn
+            width: 100px
+            height: 30px
+        
+
         
 
 

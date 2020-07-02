@@ -30,6 +30,10 @@ html(lang="ru")
                             a.header_link#link(href="#about") ABOUT
                         li.header_item
                             a.header_link#link(href="#contacts") CONTACT
+                .hamburger#hamburger
+                    span
+                    span
+                    span
             .container
                 .divide
                 h1.header_title CODING FOR<br>BETTER TOMORROW
@@ -101,6 +105,8 @@ html(lang="ru")
                             img.portfolio_img(src="img/jpg/portfolio/img_4.jpg", alt="portfolio")
                         .block_right
                             img.portfolio_img(src="img/jpg/portfolio/img_2.jpg", alt="portfolio")
+                            img.portfolio_img.hidden.up(src="img/jpg/portfolio/img_5.jpg", alt="portfolio")
+                            img.portfolio_img.hidden.down(src="img/jpg/portfolio/img_3.jpg", alt="portfolio")
                     .block_bottom
                         img.portfolio_img(src="img/jpg/portfolio/img_5.jpg", alt="portfolio")
                         img.portfolio_img(src="img/jpg/portfolio/img_6.jpg", alt="portfolio")
@@ -145,8 +151,8 @@ html(lang="ru")
                     input(type="text" placeholder='Last Name')
                     input(type="text" placeholder='Your Email') 
                     input(type="text" placeholder='Your Website') 
-                textarea(name="message", cols="30", rows="10" placeholder='Your Message')
-            button.contacts_btn Send Message
+                    textarea(name="message", cols="30", rows="10" placeholder='Your Message')
+                button.contacts_btn Send Message
         footer.footer
             .container
                 .footer_menu
@@ -167,5 +173,5 @@ html(lang="ru")
                     a(href="googleplus.com")
                         .social_icon.icon-google-plus
 
-        //-script(src='js/jquery.min.js')
-        //-script(src='js/script.js')
+        script(src='js/jquery.min.js')
+        script(src='js/script.js')
