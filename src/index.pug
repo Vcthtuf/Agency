@@ -13,9 +13,10 @@ html(lang="en")
     body
         header.header#home
             .wrapper.slider
-                img.slide_1#slide_1(src="img/jpg/slider/slide_1.jpg", alt="slide")
-                img.slide_2#slide_2(src="img/jpg/slider/slide_2.jpg", alt="slide")
-                img.slide_3#slide_3(src="img/jpg/slider/slide_3.jpg", alt="slide")
+                .slider__track
+                    img.slide.slide_1#slide_1(src="img/jpg/slider/slide_1.jpg", alt="slide")
+                    img.slide.slide_2#slide_2(src="img/jpg/slider/slide_2.jpg", alt="slide")
+                    img.slide.slide_3#slide_3(src="img/jpg/slider/slide_3.jpg", alt="slide")
             .header_nav#menu
                 .header_logo
                     a(href="#")
@@ -34,13 +35,13 @@ html(lang="en")
                     span
                     span
                     span
-            .container
+            .header__container
                 .divide
                 h1.header_title CODING FOR<br>BETTER TOMORROW
                 h3.header_subtitle Project for Avocado
                 button.header_btn Case Study
-                img.arrow.arrow_left#about(src="icon/arrow_left.png", alt="arrow_left")
-                img.arrow.arrow_right(src="icon/arrow_right.png", alt="arrow_right")
+            img.arrow.arrow_left#about(src="icon/arrow_left.png", alt="arrow_left")
+            img.arrow.arrow_right(src="icon/arrow_right.png", alt="arrow_right")
         section.who
             h2.title.who_title WHO WE ARE
             .who_text Small but very dedicated team, and we just love what we do! From wireframes, to photography, to backend, we are doing it all. Let’s make your dreams a reality!
