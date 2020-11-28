@@ -149,19 +149,30 @@
             transform: scale(1.2)
             border-color: $blue
     
-    .arrow
+    .icon-angle-left, .icon-angle-right
+        font-size: 3rem
         display: block
         position: absolute
-        bottom: 60px
+        bottom: 45px
         padding: 10px 20px
         cursor: pointer
        
         &:hover
             transform: scale(1.2)
+            &:before
+                color: $blue
 
 
-    .arrow_left
-        right: 164px
+    .icon-angle-left
+        right: 190px
+        
+        &:before
+            content: "\f104"
+            color: #fff
 
-    .arrow_right
-        right: 115px
+
+    .icon-angle-right
+        right: 100px
+        &:before
+            content: "\f105"
+            color: #fff

@@ -48,8 +48,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // slider 
 
-    let prev = document.querySelector('.arrow_left'),
-        next = document.querySelector('.arrow_right'),
+    let prev = document.querySelector('.icon-angle-left'),
+        next = document.querySelector('.icon-angle-right'),
         position = document.querySelector('.slider__track'),
         slides = document.querySelectorAll('.slide'),
         indexSlide = 1;
