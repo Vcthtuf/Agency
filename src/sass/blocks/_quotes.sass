@@ -1,19 +1,22 @@
 .quotes
+    overflow: hidden 
+    width: 100vw
     
     //padding-bottom: 30px
     // height: 155px
     // margin-top: 50px
-    z-index: 1
 
     &__track
         display: flex
-        overflow: hidden 
+        
+        padding-top: 60px
         //width: 300%
         // height: 142px
+        transform: translateX(-100%)
 
     .quote
         position: relative
-        min-width: 100%
+        min-width: 100vw
         padding-top: 8%
         // padding: 0 20%
         margin: 0 auto
@@ -21,7 +24,6 @@
         line-height: 1.4
         text-align: center
         background: url('../img/bg/bg_client.jpg') center center/cover no-repeat
-        z-index: 5
 
         &_text
             font-family: $Merri
@@ -34,11 +36,11 @@
             margin-bottom: 70px
 
         &_img
+            display: block
             position: absolute
-            top: 50%
+            top: 0
             left: 50%
             transform: translate(-50%, -50%)
-            z-index: 2
 
     .paginator
         display: flex
