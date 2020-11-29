@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-    // slider 
+    // slider of header
 
     let prev = document.querySelector('.icon-angle-left'),
         next = document.querySelector('.icon-angle-right'),
@@ -74,6 +74,27 @@ window.addEventListener('DOMContentLoaded', () => {
     next.addEventListener('click', function () {
         plusSlides(1);
     });
+
+    // slider of section quotes
+
+    let track = document.querySelector('.quotes__track'),
+        quotes = document.querySelectorAll('.quote'),
+        i = 0;
+
+    function showQuotes(n) {
+        // if (n < 0) { i = quotes.length - 1; }
+        if (n > quotes.length - 1) { i = 0; }
+        track.style.transform = 'translateX(' + i * (-100) + '%)';
+
+    };
+
+    function moveQuotes(n) {
+        showQuotes(n);
+    }
+
+    setInterval(function () { showQuotes(i); i++; }, 2000);
+
+
 
 })
 
