@@ -27,6 +27,7 @@ ul
     margin: 0 0 33px
 
 @import 'blocks/header'
+@import 'blocks/quotes'
 
 body
     max-width: 1400px
@@ -43,6 +44,8 @@ body
 
 .who
     padding: 99px 0 159px
+    z-index: -1
+    position: relative
 
     &_title  
         font-size: 36px
@@ -59,57 +62,6 @@ body
         margin: 0 auto
         width: 60%
 
-.quotes
-    background: url('../img/bg/bg_client.jpg') center center/cover no-repeat
-    padding-bottom: 30px
-    heigth: 155px
-
-    &__track
-        display: flex
-        overflow: hidden 
-        position: absolute
-        width: 300%
-        heigth: 142px
-       
-
-    .quote
-        position: relative
-        min-width: 100%
-        padding: 0 20%
-        margin: 0 auto
-        color: $white
-        line-height: 1.4
-        text-align: center
-
-        &_text
-            font-family: $Merri
-            margin-bottom: 20px
-
-        &_author
-            font-family: $Merri
-            text-align: center
-            margin-bottom: 70px
-
-        &_img
-            position: absolute
-            top: -113px
-            left: 50%
-            transform: translate(-50%, -50%)
-
-    .paginator
-        display: flex
-        justify-content: space-between
-        margin: 0 auto
-        width: 78px
-
-        .circle
-            width: 12px
-            height: 12px
-            border-radius: 50%
-            background-color: $white
-            cursor: pointer
-            &:hover
-                transform: scale(1.3333)
 
 .services
     padding: 100px 0 40px
