@@ -61,11 +61,21 @@ body
 
 .quotes
     background: url('../img/bg/bg_client.jpg') center center/cover no-repeat
-    padding: 113px 0 30px
+    padding-bottom: 30px
+    heigth: 155px
+
+    &__track
+        display: flex
+        overflow: hidden 
+        position: absolute
+        width: 300%
+        heigth: 142px
+       
 
     .quote
         position: relative
-        width: 60%
+        min-width: 100%
+        padding: 0 20%
         margin: 0 auto
         color: $white
         line-height: 1.4
