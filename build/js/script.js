@@ -85,19 +85,21 @@ window.addEventListener('DOMContentLoaded', () => {
     function showQuotes(n) {
 
 
-        if (n > quotes.length - 1) { i = 1; }
+        if (n > quotes.length - 1) { n = 1; }
         // for (let i = 0; i < quotes.length; i++) {
         //     if (i.matches('text-align: center')) {
         //         console.log('Сейчас показывается ' + i + ' слайд');
         //     };
         // };
-        track.style.transform = 'translateX(' + i * (-100) + '%)';
-        // quotes[i - 1].style.order = i;
 
+        quotes[n].style.order = i;
+        // track.style.transform = 'translateX(' + i * (-100) + '%)';
+        // quotes[i - 1].style.order = i;
+        i++;
 
     };
 
-    setInterval(function () { showQuotes(i); i++; }, 2000);
+    setInterval(function () { showQuotes(i); }, 2000);
 
 
 
