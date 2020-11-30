@@ -80,18 +80,20 @@ window.addEventListener('DOMContentLoaded', () => {
     let track = document.querySelector('.quotes__track'),
         quotes = document.querySelectorAll('.quote'),
         currentQuote,
-        i = 0;
+        i = 1;
 
     function showQuotes(n) {
 
 
-        if (n > quotes.length - 1) { i = 0; }
+        if (n > quotes.length - 1) { i = 1; }
         // for (let i = 0; i < quotes.length; i++) {
         //     if (i.matches('text-align: center')) {
         //         console.log('Сейчас показывается ' + i + ' слайд');
         //     };
         // };
         track.style.transform = 'translateX(' + i * (-100) + '%)';
+        // quotes[i - 1].style.order = i;
+
 
     };
 
