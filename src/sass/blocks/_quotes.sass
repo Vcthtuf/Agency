@@ -12,7 +12,7 @@
         padding-top: 60px
         //width: 300%
         // height: 142px
-        transform: translateX(-100%)
+        transform: translateX(0%)
         transition: transform .5s
 
     .quote
@@ -20,16 +20,12 @@
         min-width: 100vw
         padding-top: 8%
         order: 0
-        // padding: 0 20%
         margin: 0 auto
         color: $white
         line-height: 1.4
         text-align: center
         background: url('../img/bg/bg_client.jpg') center center/cover no-repeat
         transition: order .5s
-
-        &:first-child 
-            background: none
 
         &_text
             font-family: $Merri
@@ -47,6 +43,16 @@
             top: 0
             left: 50%
             transform: translate(-50%, -50%)
+        @media screen and ( max-width: 576px )
+            &_img 
+                width: 60px
+
+        @media screen and ( max-width: 480px )
+            padding-top: 40px
+            
+
+            
+        
 
     .paginator
         display: flex
